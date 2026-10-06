@@ -1,0 +1,108 @@
+@layer bootstrap {
+.standings-page {
+  min-height: 100%;
+  background-image:
+    linear-gradient(135deg, rgba(3, 8, 17, 0.84), rgba(5, 12, 23, 0.7)),
+    url('/images/backgrounds/match-standings-background-optimized.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: color 180ms ease, background-image 180ms ease;
+}
+
+.standings-page[data-theme='light'] {
+  color-scheme: light;
+  background-image:
+    linear-gradient(135deg, rgba(248, 250, 252, 0.78), rgba(226, 232, 240, 0.72)),
+    url('/images/backgrounds/match-standings-background-optimized.jpg');
+}
+
+.standings-page[data-theme='light'] .text-white {
+  color: #0f172a !important;
+}
+
+.standings-page[data-theme='light'] .text-slate-100 {
+  color: #172033 !important;
+}
+
+.standings-page[data-theme='light'] .text-slate-200 {
+  color: #253044 !important;
+}
+
+.standings-page[data-theme='light'] .text-slate-300 {
+  color: #334155 !important;
+}
+
+.standings-page[data-theme='light'] .text-slate-400 {
+  color: #475569 !important;
+}
+
+.standings-page[data-theme='light'] .text-slate-500,
+.standings-page[data-theme='light'] .text-slate-600 {
+  color: #64748b !important;
+}
+
+.standings-page[data-theme='light'] [class~='text-[#8eb9dc]'],
+.standings-page[data-theme='light'] [class~='text-[#72a9d6]'],
+.standings-page[data-theme='light'] [class~='text-[#5d9bd0]'],
+.standings-page[data-theme='light'] [class~='text-[#a8c9e5]'] {
+  color: #2563eb !important;
+}
+
+.standings-page[data-theme='light'] [class~='bg-[#090a0c]'],
+.standings-page[data-theme='light'] [class~='bg-[#0b0c0f]'],
+.standings-page[data-theme='light'] [class~='bg-[#0d0e11]'],
+.standings-page[data-theme='light'] [class~='bg-[#0d1014]'],
+.standings-page[data-theme='light'] [class~='bg-[#101114]'],
+.standings-page[data-theme='light'] [class~='bg-[#111215]'],
+.standings-page[data-theme='light'] [class~='bg-[#111317]'],
+.standings-page[data-theme='light'] [class~='bg-[#11151b]'],
+.standings-page[data-theme='light'] [class~='bg-[#121316]'],
+.standings-page[data-theme='light'] [class~='bg-[#14202a]'],
+.standings-page[data-theme='light'] [class~='bg-[#17191d]'],
+.standings-page[data-theme='light'] [class~='bg-[#171b22]'],
+.standings-page[data-theme='light'] [class~='bg-[#17212b]'],
+.standings-page[data-theme='light'] [class~='bg-[#172431]'],
+.standings-page[data-theme='light'] [class~='bg-[#202126]'],
+.standings-page[data-theme='light'] [class~='bg-[#25262a]'],
+.standings-page[data-theme='light'] [class~='bg-[#292a2f]'],
+.standings-page[data-theme='light'] [class~='bg-[#2b2c31]'] {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(14px);
+}
+
+.standings-page[data-theme='light'] [class~='bg-[#101713]'] {
+  background-color: rgba(240, 253, 244, 0.92) !important;
+}
+
+.standings-page[data-theme='light'] [class~='border-[#1c1d21]'],
+.standings-page[data-theme='light'] [class~='border-[#202126]'],
+.standings-page[data-theme='light'] [class~='border-[#25262a]'],
+.standings-page[data-theme='light'] [class~='border-[#25282e]'],
+.standings-page[data-theme='light'] [class~='border-[#252a31]'],
+.standings-page[data-theme='light'] [class~='border-[#292a2f]'],
+.standings-page[data-theme='light'] [class~='border-[#2a2d33]'],
+.standings-page[data-theme='light'] [class~='border-[#2b2c31]'],
+.standings-page[data-theme='light'] [class~='border-[#303137]'],
+.standings-page[data-theme='light'] [class~='border-[#333943]'],
+.standings-page[data-theme='light'] [class~='border-[#33343a]'],
+.standings-page[data-theme='light'] [class~='border-[#30343b]'],
+.standings-page[data-theme='light'] [class~='border-[#343943]'] {
+  border-color: #d7e0eb !important;
+}
+
+.standings-page[data-theme='light'] [class*='bg-gradient-to-'] {
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(241, 245, 249, 0.88)) !important;
+}
+
+.standings-page[data-theme='light'] .hover\:bg-white\/\[0\.025\]:hover,
+.standings-page[data-theme='light'] .hover\:bg-white\/\[0\.03\]:hover {
+  background-color: rgba(226, 232, 240, 0.7) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .standings-page {
+    transition: none;
+  }
+}
+}

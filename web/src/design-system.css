@@ -1,0 +1,559 @@
+/* Webmasters Esports Tournament Design System */
+
+/* Color Palette */
+:root {
+  /* Primary Colors */
+  --color-navy: #07101F;
+  --color-dark-blue: #0B2A6F;
+  --color-royal-blue: #1247B8;
+  --color-electric-blue: #1E63FF;
+  --color-light-blue: #4DA3FF;
+  --color-ice-blue: #8CC8FF;
+  --color-purple: #8B5CF6;
+  --color-pink: #EC4899;
+
+  /* Neutrals */
+  --color-silver: #C9D2DC;
+  --color-metallic-silver: #A0A8B3;
+  --color-white: #FFFFFF;
+
+  /* Backgrounds */
+  --color-bg-primary: #020817;
+  --color-bg-secondary: #061a2b;
+  --color-bg-tertiary: #0f3a5f;
+  --color-bg-quaternary: rgba(15, 23, 42, 0.78);
+
+  /* Text */
+  --color-text-primary: #E2E8F0;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #94A3B8;
+
+  /* Accents & States */
+  --color-accent: var(--color-electric-blue);
+  --color-accent-hover: #1D4ED8;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+
+  /* Game-specific colors */
+  --color-mlbb: #F59E0B; /* Amber/Gold */
+  --color-mlbb-dark: #D97706;
+  --color-valorant: #EF4444; /* Red */
+  --color-valorant-dark: #DC2626;
+
+  /* Gradients */
+  --gradient-bg: radial-gradient(circle at top, rgba(30, 99, 255, 0.15), transparent 40%),
+                 linear-gradient(180deg, #020817 0%, #0b1120 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-electric-blue), var(--color-light-blue));
+  --gradient-mlbb: linear-gradient(135deg, var(--color-mlbb), var(--color-light-blue));
+  --gradient-valorant: linear-gradient(135deg, var(--color-valorant), var(--color-pink));
+  --gradient-dark: linear-gradient(135deg, #0f172a, #020817);
+}
+
+/* Typography Scale */
+:root {
+  --font-sans: "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "sans-serif";
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;   /* 12px */
+  --text-sm: 0.875rem;  /* 14px */
+  --text-base: 1rem;    /* 16px */
+  --text-lg: 1.125rem;  /* 18px */
+  --text-xl: 1.25rem;   /* 20px */
+  --text-2xl: 1.5rem;   /* 24px */
+  --text-3xl: 1.875rem; /* 30px */
+  --text-4xl: 2.25rem;  /* 36px */
+  --text-5xl: 3rem;     /* 48px */
+  --text-6xl: 3.75rem;  /* 60px */
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+}
+
+/* Spacing Scale (8px base) */
+:root {
+  --space-0: 0px;
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-2-5: 10px;
+  --space-3: 12px;
+  --space-3-5: 14px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-11: 44px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-28: 112px;
+  --space-32: 128px;
+  --space-36: 144px;
+  --space-40: 160px;
+  --space-44: 176px;
+  --space-48: 192px;
+  --space-52: 208px;
+  --space-56: 224px;
+  --space-60: 240px;
+  --space-64: 256px;
+  --space-72: 288px;
+  --space-80: 320px;
+  --space-96: 384px;
+}
+
+/* Border Radius */
+:root {
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 20px;
+  --radius-full: 9999px;
+}
+
+/* Border Width */
+:root {
+  --border-0: 0px;
+  --border-1: 1px;
+  --border-2: 2px;
+  --border-3: 3px;
+  --border-4: 4px;
+  --border-8: 8px;
+}
+
+/* Shadow/Elevation */
+:root {
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  /* Glow effects (subtle) */
+  --glow-blue: 0 0 0 2px rgba(30, 99, 255, 0.3);
+  --glow-blue-hover: 0 0 0 3px rgba(30, 99, 255, 0.4);
+  --glow-amber: 0 0 0 2px rgba(245, 158, 11, 0.3);
+  --glow-amber-hover: 0 0 0 3px rgba(245, 158, 11, 0.4);
+  --glow-red: 0 0 0 2px rgba(239, 68, 68, 0.3);
+  --glow-red-hover: 0 0 0 3px rgba(239, 68, 68, 0.4);
+}
+
+/* Transitions */
+:root {
+  --transition-fast: 100ms ease-in-out;
+  --transition-normal: 150ms ease-in-out;
+  --transition-slow: 250ms ease-in-out;
+
+  --transition-transform: transform var(--transition-normal);
+  --transition-opacity: opacity var(--transition-normal);
+  --transition-shadow: box-shadow var(--transition-normal);
+  --transition-all: all var(--transition-normal);
+  --transition-transform-slow: transform var(--transition-slow);
+}
+
+/* Container Widths */
+:root {
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  --container-full: 100%;
+}
+
+/* Z-Indices */
+:root {
+  --z-index-0: 0;
+  --z-index-10: 10;
+  --z-index-20: 20;
+  --z-index-30: 30;
+  --z-index-40: 40;
+  --z-index-50: 50;
+  --z-index-60: 60;
+  --z-index-70: 70;
+  --z-index-80: 80;
+  --z-index-90: 90;
+  --z-index-100: 100;
+  --z-index-auto: auto;
+}
+
+/* Utility Classes for Design System */
+.border-accent { border-color: var(--color-accent); }
+.border-accent-hover:hover { border-color: var(--color-accent-hover); }
+.bg-accent { background-color: var(--color-accent); }
+.bg-accent-hover:hover { background-color: var(--color-accent-hover); }
+.text-accent { color: var(--color-accent); }
+.text-accent-hover:hover { color: var(--color-accent-hover); }
+
+.border-mlbb { border-color: var(--color-mlbb); }
+.border-mlbb-hover:hover { border-color: var(--color-mlbb-dark); }
+.bg-mlbb { background-color: var(--color-mlbb); }
+.bg-mlbb-hover:hover { background-color: var(--color-mlbb-dark); }
+.text-mlbb { color: var(--color-mlbb); }
+.text-mlbb-hover:hover { color: var(--color-mlbb-dark); }
+
+.border-valorant { border-color: var(--color-valorant); }
+.border-valorant-hover:hover { border-color: var(--color-valorant-dark); }
+.bg-valorant { background-color: var(--color-valorant); }
+.bg-valorant-hover:hover { background-color: var(--color-valorant-dark); }
+.text-valorant { color: var(--color-valorant); }
+.text-valorant-hover:hover { color: var(--color-valorant-dark); }
+
+.hover\:shadow-md:hover { box-shadow: var(--shadow-md); }
+.hover\:shadow-lg:hover { box-shadow: var(--shadow-lg); }
+.hover\:shadow-xl:hover { box-shadow: var(--shadow-xl); }
+.hover\:glow-blue:hover { box-shadow: var(--glow-blue); }
+.hover\:glow-blue-hover:hover { box-shadow: var(--glow-blue-hover); }
+.hover\:glow-amber:hover { box-shadow: var(--glow-amber); }
+.hover\:glow-amber-hover:hover { box-shadow: var(--glow-amber-hover); }
+.hover\:glow-red:hover { box-shadow: var(--glow-red); }
+.hover\:glow-red-hover:hover { box-shadow: var(--glow-red-hover); }
+
+.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.transition-opacity { transition-property: opacity; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.transition-transform-slow { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 250ms; }
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #020817;
+    --color-bg-secondary: #061a2b;
+    --color-bg-tertiary: #0f3a5f;
+  }
+}
+
+/* Reduce motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+    --transition-slow: 0ms;
+  }
+}
+
+/* ===== WEBMASTERS reference theme (adapted from C:\WEBMASTERS\styles.css) ===== */
+:root {
+  --wm-bg: #050814;
+  --wm-bg-deep: #02040d;
+  --wm-panel: rgba(9, 16, 32, 0.55);
+  --wm-cyan: #4dcdff;
+  --wm-ice: #00a3ff;
+  --wm-chrome: #e0e6ed;
+  --wm-body: #c4d0dc;
+  --wm-muted: #7b8794;
+  --wm-border-line: rgba(77, 205, 255, 0.22);
+  --wm-border-strong: rgba(77, 205, 255, 0.48);
+  --wm-valorant: #ff4655;
+  --wm-mlbb: #00e5ff;
+  --font-display: "Orbitron", "Segoe UI", system-ui, sans-serif;
+  --font-body-wm: "Rajdhani", "Segoe UI", system-ui, sans-serif;
+}
+
+.font-display { font-family: var(--font-display); }
+.font-body-wm { font-family: var(--font-body-wm); }
+
+/* Animation Keyframes */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes slide-in-from-top {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-in-from-bottom {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Animation Classes */
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shine {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shine 3s linear infinite;
+}
+
+.animate-slideInFromTop {
+  animation: slide-in-from-top 0.3s ease-out forwards;
+}
+
+.animate-slideInFromBottom {
+  animation: slide-in-from-bottom 0.3s ease-out forwards;
+}
+
+/* Glassmorphism Effect */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(71, 85, 105, 0.2);
+}
+
+/* Esports-specific UI Patterns */
+.team-card-base {
+  @apply rounded-2xl border border-slate-800/90 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-950 shadow-xl backdrop-blur-md hover:border-slate-700/90 hover:scale-[1.02] transition-all flex flex-col justify-between space-y-4;
+}
+
+.match-card-base {
+  @apply rounded-2xl border border-slate-800/80 bg-gradient-to-b from-slate-900/70 via-slate-900/60 to-slate-950 shadow-lg backdrop-blur-md hover:border-slate-700/90 hover:scale-[1.01] transition-all;
+}
+
+.stat-card-base {
+  @apply rounded-xl border border-slate-800/60 bg-gradient-to-b from-slate-900/50 via-slate-900/40 to-slate-950 shadow-md backdrop-blur-sm;
+}
+
+/* Typography Scale */
+:root {
+  --font-sans: "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "sans-serif";
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;   /* 12px */
+  --text-sm: 0.875rem;  /* 14px */
+  --text-base: 1rem;    /* 16px */
+  --text-lg: 1.125rem;  /* 18px */
+  --text-xl: 1.25rem;   /* 20px */
+  --text-2xl: 1.5rem;   /* 24px */
+  --text-3xl: 1.875rem; /* 30px */
+  --text-4xl: 2.25rem;  /* 36px */
+  --text-5xl: 3rem;     /* 48px */
+  --text-6xl: 3.75rem;  /* 60px */
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+}
+
+/* Spacing Scale (8px base) */
+:root {
+  --space-0: 0px;
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-2-5: 10px;
+  --space-3: 12px;
+  --space-3-5: 14px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-11: 44px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-28: 112px;
+  --space-32: 128px;
+  --space-36: 144px;
+  --space-40: 160px;
+  --space-44: 176px;
+  --space-48: 192px;
+  --space-52: 208px;
+  --space-56: 224px;
+  --space-60: 240px;
+  --space-64: 256px;
+  --space-72: 288px;
+  --space-80: 320px;
+  --space-96: 384px;
+}
+
+/* Border Radius */
+:root {
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-full: 9999px;
+}
+
+/* Border Width */
+:root {
+  --border-0: 0px;
+  --border-1: 1px;
+  --border-2: 2px;
+  --border-4: 4px;
+  --border-8: 8px;
+}
+
+/* Shadow/Elevation */
+:root {
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  /* Glow effects (subtle) */
+  --glow-blue: 0 0 0 2px rgba(30, 99, 255, 0.3);
+  --glow-blue-hover: 0 0 0 3px rgba(30, 99, 255, 0.4);
+}
+
+/* Transitions */
+:root {
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 200ms ease-in-out;
+  --transition-slow: 300ms ease-in-out;
+
+  --transition-transform: transform var(--transition-normal);
+  --transition-opacity: opacity var(--transition-normal);
+  --transition-shadow: box-shadow var(--transition-normal);
+  --transition-all: all var(--transition-normal);
+}
+
+/* Container Widths */
+:root {
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  --container-full: 100%;
+}
+
+/* Z-Indices */
+:root {
+  --z-index-0: 0;
+  --z-index-10: 10;
+  --z-index-20: 20;
+  --z-index-30: 30;
+  --z-index-40: 40;
+  --z-index-50: 50;
+  --z-index-auto: auto;
+}
+
+/* Utility Classes for Design System */
+.border-accent { border-color: var(--color-accent); }
+.border-accent-hover:hover { border-color: var(--color-accent-hover); }
+.bg-accent { background-color: var(--color-accent); }
+.bg-accent-hover:hover { background-color: var(--color-accent-hover); }
+.text-accent { color: var(--color-accent); }
+.text-accent-hover:hover { color: var(--color-accent-hover); }
+
+.hover\:shadow-md:hover { box-shadow: var(--shadow-md); }
+.hover\:shadow-lg:hover { box-shadow: var(--shadow-lg); }
+.hover\:glow-blue:hover { box-shadow: var(--glow-blue); }
+.hover\:glow-blue-hover:hover { box-shadow: var(--glow-blue-hover); }
+
+.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 200ms; }
+.transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 200ms; }
+.transition-opacity { transition-property: opacity; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 200ms; }
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #020817;
+    --color-bg-secondary: #061a2b;
+    --color-bg-tertiary: #0f3a5f;
+  }
+}
+
+/* Reduce motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+    --transition-slow: 0ms;
+  }
+}
+
+/* ===== WEBMASTERS reference theme (adapted from C:\WEBMASTERS\styles.css) ===== */
+:root {
+  --wm-bg: #050814;
+  --wm-bg-deep: #02040d;
+  --wm-panel: rgba(9, 16, 32, 0.55);
+  --wm-cyan: #4dcdff;
+  --wm-ice: #00a3ff;
+  --wm-chrome: #e0e6ed;
+  --wm-body: #c4d0dc;
+  --wm-muted: #7b8794;
+  --wm-border-line: rgba(77, 205, 255, 0.22);
+  --wm-border-strong: rgba(77, 205, 255, 0.48);
+  --wm-valorant: #ff4655;
+  --wm-mlbb: #00e5ff;
+  --font-display: "Orbitron", "Segoe UI", system-ui, sans-serif;
+  --font-body-wm: "Rajdhani", "Segoe UI", system-ui, sans-serif;
+}
+
+.font-display { font-family: var(--font-display); }
+.font-body-wm { font-family: var(--font-body-wm); }

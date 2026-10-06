@@ -1,0 +1,1 @@
+Replace `match-standings-background.jpg` in this folder to change the Match Standings and landing page background source. Keep the original full-resolution image here; the pages currently use the optimized derivative for faster loading. Regenerate `match-standings-background-optimized.jpg` after replacing the source image. A dark overlay is applied in the UI for text contrast.

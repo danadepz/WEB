@@ -1,0 +1,41 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOrganizer() {
+      return request.auth != null
+        && exists(/databases/$(database)/documents/organizers/$(request.auth.uid));
+    }
+
+    // Public read-only tournament data
+    match /tournaments/current {
+      allow read: if true;
+      allow write: if isOrganizer();
+    }
+
+    // Live matches ticker: public read, coordinator write
+    match /liveMatches/{matchId} {
+      allow read: if true;
+      allow write: if isOrganizer();
+    }
+
+    // Department leaderboard summary document: public read, coordinator write
+    match /leaderboard/{docId} {
+      allow read: if true;
+      allow write: if isOrganizer();
+    }
+
+    // Player stats: public read, coordinator write
+    match /playerStats/{docId} {
+      allow read: if true;
+      allow write: if isOrganizer();
+    }
+
+    // Coordinator accounts
+    match /organizers/{uid} {
+      allow get: if request.auth != null && (request.auth.uid == uid || isOrganizer());
+      allow list: if isOrganizer();
+      allow create, update, delete: if isOrganizer();
+    }
+  }
+}

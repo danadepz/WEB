@@ -1,0 +1,20 @@
+{
+  "name": "web-intramurals-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Intramurals Tournament System — Backend API + Web Viewing Portal",
+  "workspaces": [
+    "backend",
+    "web"
+  ],
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:web": "npm --prefix web run dev",
+    "build:web": "npm --prefix web run build",
+    "start:backend": "npm --prefix backend run start",
+    "lint:web": "npm --prefix web run lint"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
