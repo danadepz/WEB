@@ -1,4 +1,22 @@
-# Intramurals Tournament System — Decoupled Monorepo
+<p align="center">
+  <img src="web/public/images/logo/logo-optimized.png" alt="WEBMASTERS Esports Logo" width="128" />
+</p>
+
+<h1 align="center">Intramurals Tournament System</h1>
+
+<p align="center">
+  <b>Official Student Live Viewing Portal & Coordinator Control Room</b><br />
+  University of Cebu – Banilad
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Firebase-Firestore%20%7C%20Auth-orange?style=flat-square&logo=firebase" alt="Firebase" />
+  <img src="https://img.shields.io/badge/Frontend-Vite%20%7C%20React%2019-blue?style=flat-square&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/Backend-Node.js%20%7C%20Express-green?style=flat-square&logo=node.js" alt="Node" />
+  <img src="https://img.shields.io/badge/TailwindCSS-v4-38bdf8?style=flat-square&logo=tailwindcss" alt="Tailwind" />
+</p>
+
+---
 
 A clean, decoupled monorepo for the **Intramurals Tournament Management System**, consisting of:
 1. **`/backend`**: Node.js / Express REST API, tournament logic, and Firestore read/admin operations.

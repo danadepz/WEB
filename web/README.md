@@ -1,6 +1,24 @@
-# Web Client — Intramurals Tournament Portal
+<p align="center">
+  <img src="public/images/logo/logo-optimized.png" alt="WEBMASTERS Esports Logo" width="128" />
+</p>
 
-Student live-viewing portal and Admin/Faculty management dashboard. Built with **Vite + React**, styled with **Tailwind CSS v4** and **Bootstrap 5**. Connects to Firebase Firestore directly (client SDK) and optionally to the `/backend` Express API.
+<h1 align="center">Web Viewing Portal</h1>
+
+<p align="center">
+  <b>Student Live-Viewing Portal & Coordinator Control Room</b><br />
+  University of Cebu – Banilad
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Vite-8.3-646CFF?style=flat-square&logo=vite" alt="Vite" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/TailwindCSS-v4-38BDF8?style=flat-square&logo=tailwindcss" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Firebase-v12-FFCA28?style=flat-square&logo=firebase" alt="Firebase" />
+</p>
+
+---
+
+Built with **Vite + React**, styled with **Tailwind CSS v4** and **Bootstrap 5**. Connects directly to Firebase Firestore for real-time live spectator viewing and optionally to the `/backend` Express API.
 
 ## Tech Stack
 
@@ -10,7 +28,7 @@ Student live-viewing portal and Admin/Faculty management dashboard. Built with *
 - **Styling**: Tailwind CSS v4, Bootstrap 5, Bootstrap Icons
 - **Icons**: Lucide React
 - **Database**: Firebase Firestore (Client SDK)
-- **Auth**: Firebase Authentication
+- **Auth**: Firebase Authentication (Coordinator only)
 
 ## Setup
 
@@ -37,21 +55,17 @@ The app runs at **http://localhost:5173** by default.
 | `VITE_FIREBASE_MEASUREMENT_ID` | Firebase Analytics measurement ID |
 | `VITE_API_BASE_URL` | Backend API base URL (default: `http://localhost:5000`) |
 
-## Key Screens
+## Key Viewing Features
 
-| Route | Component | Description |
+| Feature | Component | Description |
 |---|---|---|
-| `/` | `LandingPage` | Home & event overview |
-| `/view` | `PublicTournamentView` | Live standings (student view) |
-| `/admin/login` | `AdminLoginPage` | Organizer sign-in |
-| `/admin` | `ControlRoomPage` | Organizer control room |
-| `/admin/teams` | `TeamManagement` | Manage registered teams |
-| `/admin/schedule` | `ScheduleGenerator` | Generate match schedule |
-| `/admin/results` | `MatchResultEntry` | Enter match results |
-| `/admin/standings` | `LeagueStandingsPage` | Full standings view |
-| `/admin/stats` | `PlayerStatsPage` | Player statistics |
-| `/admin/access` | `AccessControlPage` | Manage organizer access |
-| `/register` | `RegistrationPage` | Team registration form |
+| **Live Ticker** | `LiveTickerBanner` | Horizontal real-time score marquee for active matches |
+| **Leaderboard** | `DepartmentLeaderboard` | Single summary document read for medal/point tally |
+| **Landing Page** | `LandingPage` | Home hero and tournament overview |
+| **Standings** | `LeagueStandingsPage` | Group standings and match results |
+| **Brackets** | `PlayoffBracket` | Single & double elimination playoff brackets |
+| **Player Stats** | `PlayerStatsPage` | Top performers and MVP leaderboard |
+| **Coordinator Room** | `ControlRoomPage` | Password-protected match result entry |
 
 ## Build & Deploy (Firebase Hosting)
 
@@ -60,12 +74,10 @@ npm run build          # outputs to dist/
 firebase deploy --only hosting
 ```
 
-> Firebase Hosting is configured via the root `firebase.json` pointing to `web/dist`.
-
 ## Deploy to Vercel
 
 1. Import the repo into Vercel.
 2. Set **Root Directory** → `web`
 3. Set **Framework** → `Vite`
 4. Add environment variables from `.env.example`.
-5. Deploy — Vercel auto-detects Vite and runs `npm run build`.
+5. Deploy.
